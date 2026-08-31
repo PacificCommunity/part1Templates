@@ -37,7 +37,7 @@ ll_species <- unlist(config$ll_species)
 base_dir <- config$base_dir
 fig_dir <- config$folders$figures
 tbl_dir <- config$folders$tables
-not_applicable_measures <- config$not_applicable_measures
+not_applicable_measures <- config$addendum$not_applicable_measures
 country_name <- config$country_names[tolower(country_code)]
 ref_data_folder <- config$folders$ref_data
 ikasavea_folder <- config$folders$ikasavea
@@ -1705,7 +1705,7 @@ render_tbl_2010_07 <- function(data, no_rep = "2939", no_cmm = "2010_07", member
 # the whole map absent/"none", is treated as applicable - matching the
 # YAML tag's stated default of "none means all CMMs apply".
 cmm_status <- function(cmm_code) {
-  reasons <- config$not_applicable_measures
+  reasons <- config$addendum$not_applicable_measures
   
   if (is.null(reasons) || identical(reasons, "none") || !(cmm_code %in% names(reasons))) {
     return(list(applicable = TRUE, reason = NULL))
