@@ -1,0 +1,105 @@
+addendum:
+  not_applicable_measures: none
+
+folders: 
+  tables: data/scidata_{{report_year}}_{{country_code}}/tables
+  figures: data/scidata_{{report_year}}_{{country_code}}/figures
+  ikasavea_reports: data/scidata_{{report_year}}_{{country_code}}/ikasavea
+  artisanal_est_trips: data/scidata_{{report_year}}_{{country_code}}/artisanal_est_trips
+  others: data/scidata_{{report_year}}_{{country_code}}/additional_files
+  ref_data: R/ref_data
+
+base_dir: data/scidata_{{report_year}}_{{country_code}}/
+
+country_names:
+  fj: Fiji
+  fm: Federated States of Micronesia
+  gu: Guam
+  ki: Kiribati
+  mh: Marshall Islands
+  mp: Northern Mariana Is.
+  nc: New Caledonia
+  nr: Naoero
+  nu: Niue
+  pf: French Polynesia
+  pg: Papua New Guinea
+  pn: Pitcairn
+  pw: Palau
+  sb: Solomon Islands
+  tk: Tokelau
+  to: Tonga
+  tv: Tuvalu
+  vu: Vanuatu
+  wf: Wallis and Futuna Islands
+  ck: Cook Islands
+  ws: Samoa
+
+species_labels:
+  ps:
+    alb: Albacore
+    bet: Bigeye tuna
+    skj: Skipjack tuna
+    yft: Yellowfin tuna
+    pbf: Pacific bluefin tuna
+
+  ll:
+    alb: Albacore
+    bet: Bigeye tuna
+    skj: Skipjack tuna
+    yft: Yellowfin tuna
+    pbf: Pacific bluefin tuna
+    swo: Swordfish
+    blm: Black marlin
+    bum: Blue marlin
+    mls: Striped marlin
+
+  pl:
+    alb: Albacore
+    bet: Bigeye tuna
+    skj: Skipjack tuna
+    yft: Yellowfin tuna
+    pbf: Pacific bluefin tuna
+
+  all:
+    alb: Albacore
+    bet: Bigeye tuna
+    skj: Skipjack tuna
+    yft: Yellowfin tuna
+    pbf: Pacific bluefin tuna
+    swo: Swordfish
+    blm: Black marlin
+    bum: Blue marlin
+    mls: Striped marlin
+    ssp: Shortbill spearfish
+    sfa: Sailfish
+    bsh: Blue shark
+    fal: Silky shark
+    ocs: Oceanic whitetip shark
+    mak: Mako sharks (mak)
+    sma: Mako sharks (sma)
+    lma: Mako sharks (lma)
+    thr: Thresher sharks (thr)
+    alv: Thresher sharks (alv)
+    pth: Thresher sharks (pth)
+    bth: Thresher sharks (bth)
+    por: Porbeagle shark
+    spn: Hammerhead sharks (spn)
+    spk: Hammerhead sharks (spk)
+    spl: Hammerhead sharks (spl)
+    spz: Hammerhead sharks (spz)
+    spq: Hammerhead sharks (spq)
+    eub: Hammerhead sharks (eub)
+    rhn: Whale shark
+    
+  
+ps_species: [skj, yft, bet, alb, pbf]
+ll_species: [skj, yft, bet, alb, pbf, blm, bum, mls, swo]
+gear_codes: [l, s]
+
+# Pretty label -> actual column name in the data
+region_lookup:
+  "South Pacific Ocean": spac
+  "North Pacific Ocean": npac
+  "WCPFC Convention Area (S of Equator)": log_sx_raised
+  "WCPFC Convention Area (N of Equator)": log_nx_raised
+  "WCPO": log_wcpo_raised

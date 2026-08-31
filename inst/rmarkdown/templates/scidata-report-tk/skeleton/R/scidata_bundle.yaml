@@ -1,0 +1,29 @@
+# Report bundle definition for this Part 1 report.
+#
+# Update the `reports:` list below when the set of Tufman2 reports
+# needed for this report changes year to year.
+#
+# {{report_year}} below is a placeholder — it gets filled in at read
+# time via tuf_read_bundle(path, report_year = 2024), rather than
+# being hardcoded here.
+#
+# Each report gets its own explicit `attrs`. This is what replaces the
+# old guid-based exceptions: instead of code saying "remove flag_code
+# for this specific guid," you just don't list flag_code for that
+# report's entry below.
+
+country_code: {{country_code}}
+save_folder: data/scidata_{{report_year}}_{{country_code}}
+
+reports:
+  - user_report_id: 3615
+    attrs:
+      year: {{report_year}}
+  - user_report_id: 3614
+    attrs:
+      year: {{report_year}}
+  - user_report_id: 2900
+  - user_report_id: 2894
+    attrs:
+      year: {{report_year}}
+  - user_report_id: 2904

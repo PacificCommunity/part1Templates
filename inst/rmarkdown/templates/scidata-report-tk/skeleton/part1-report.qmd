@@ -1,0 +1,60 @@
+---
+params:
+  country_code: "TK"
+  report_year: 2025
+  refresh_data: false
+format:
+  pdf:
+    pdf-engine: xelatex
+    mainfont: "Times New Roman"
+    template-partials:
+      - before-body.tex
+    documentclass: SCreport
+    fontsize: 11pt
+    geometry:
+      - margin=1in
+    toc: true
+    number-sections: true
+    link-citations: true
+    colorlinks: true
+    linkcolor: SCblue
+    filecolor: SCblue
+    urlcolor: SCblue
+    citecolor: SCblue
+    toccolor: SCblue
+    highlight-style: github
+    code-block-bg: "#f6f8fa"
+    code-block-border-left: "#c5c5c5"
+    code-font: "Consolas, Monaco, 'Andale Mono', monospace"
+    filters:
+      - inline-code.lua
+    include-in-header:
+      - text: |
+          \usepackage{float}
+          \makeatletter
+          \let\DeclareUnicodeCharacter\@gobble
+          \makeatother
+          \floatplacement{figure}{H}
+          \floatplacement{table}{H}
+      - R/preambles/preamble_active.tex
+    header-includes: |
+     \usepackage{xcolor}
+     \usepackage{eso-pic}
+     \definecolor{inlinecodecolor}{RGB}{40, 44, 52}
+     \definecolor{inlinecodebg}{RGB}{245, 245, 245}
+     \let\oldtexttt\texttt
+     \renewcommand{\texttt}[1]{\colorbox{inlinecodebg}{\textcolor{inlinecodecolor}{\oldtexttt{#1}}}}
+---
+
+```{r report-setup, include=FALSE}
+country_code <- toupper(params$country_code)
+report_year  <- params$report_year
+refresh_data <- isTRUE(params$refresh_data)
+
+source("R/config.R")
+generate_preamble(country_code = country_code, report_year = report_year)
+
+source("R/data_prep.R")
+```
+
+{{< include report-body.qmd >}}

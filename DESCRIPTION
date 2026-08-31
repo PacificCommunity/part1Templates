@@ -1,0 +1,31 @@
+Package: part1Templates
+Title: Report Templates for OFP Data Products
+Version: 0.0.0.9000
+Authors@R:  person("Jessica Leiria Schattschneider", "", email = "jessicals@spc.int", role = c("aut", "cre"))
+Description: Starting-point Quarto report templates (structure, data
+    prep scripts, and configs) for the WCPFC SciData Part 1 report,
+    built on top of tufman2R.
+License: file LICENSE
+Encoding: UTF-8
+Imports:
+    rmarkdown,
+    quarto,
+    cli,
+    tufman2R
+Suggests:
+    tidyverse,
+    flextable,
+    janitor,
+    yaml,
+    glue,
+    sf,
+    rnaturalearth,
+    scatterpie,
+    scales,
+    mregions2,
+    countrycode,
+    knitr,
+    tidyselect
+Remotes:
+    PacificCommunity/tufman2R
+Config/roxygen2/version: 8.0.0

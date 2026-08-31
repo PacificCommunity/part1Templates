@@ -1,0 +1,86 @@
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{ltablex}
+\keepXColumns
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{pdflscape}
+\usepackage{xcolor}
+\usepackage{setspace}
+
+% Match Word line spacing
+\setstretch{1.15}
+
+% Remove paragraph indent (Word style)
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\AtBeginDocument{
+
+% ============================================================
+% PAGE 1: WCPFC Cover Page
+% ============================================================
+
+\begin{titlepage}
+\centering
+\vspace*{0.1cm}
+
+\includegraphics[width=0.42\textwidth]{static/wcpfc-logo.jpg}
+
+\vspace{0.1cm}
+
+{\normalsize\bfseries SCIENTIFIC COMMITTEE\\
+TWENTY-FIRST REGULAR SESSION}
+
+\vspace{0.1cm}
+
+__LOCATION__\\
+__SESSION_DATES__
+
+\vspace{0.1cm}
+
+\rule{\textwidth}{0.8pt}
+
+{\bfseries ANNUAL REPORT TO THE COMMISSION\\
+PART 1: INFORMATION ON FISHERIES, RESEARCH AND STATISTICS}
+
+\rule{\textwidth}{0.8pt}
+
+\vspace{0.1cm}
+
+\begin{flushright}
+WCPFC-SC__SC_SESSION__-AR/CCM-__CCM_NUM__\\
+__REPORT_DATE__
+\end{flushright}
+
+\vspace{2cm}
+
+{\normalsize\bfseries __COUNTRY_NAME__}
+
+\end{titlepage}
+
+% ============================================================
+% PAGE 2: Country Cover Page
+% ============================================================
+
+\begin{titlepage}
+\centering
+\vspace*{0.1cm}
+
+{\bfseries __REPORT_YEAR__ ANNUAL REPORT TO THE\\
+WESTERN AND CENTRAL PACIFIC FISHERIES COMMISSION\\
+PART 1: INFORMATION ON FISHERIES, RESEARCH, AND STATISTICS}
+
+\vfill
+
+\includegraphics[width=0.45\textwidth]{__FLAG_PATH__}
+
+\vfill
+
+\end{titlepage}
+
+}

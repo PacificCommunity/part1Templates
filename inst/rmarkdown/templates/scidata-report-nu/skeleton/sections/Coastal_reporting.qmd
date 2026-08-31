@@ -1,0 +1,86 @@
+---
+editor:
+  markdown:
+    wrap: 72
+---
+
+# Coastal State Reporting {#sec-flag}
+
+## Artisanal ACE
+
+Although Niue is not a flag state, this section presents annual catch estimates derived from artisanal
+fishery data. To improve the estimate of annual production, catch landings recorded in TAILS are raised
+using estimated fishing activity — the number of boats and canoes estimated to fish daily at each landing
+site. Table 1 presents the raised and unraised estimates per species for 2025, and Table 2 shows the
+percentage contribution of each species.
+
+```{r}
+#| echo: false
+#| label: tbl-raised-ace
+#| results: 'asis'
+#| tbl-cap: Raised and unraised annual artisanal catch estimates in mt
+
+source_labels <- c(tufman2 = "Tufman2 (Tails)", ikasavea = "Ikasavea")
+
+sources_note <- glue::glue(
+  "Data sources: {paste(source_labels[artisanal_data_sources], collapse = ' + ')}.",
+  if (!is.null(local_knowl_trips_file))
+    " Member-estimated (local knowledge) trip counts were incorporated where higher than reported trips."
+  else "No estimated trips are available per landing sites, therefore, catch values could not be raised. "
+)
+
+flextable(artisanal_ace$ace_summary|>
+  mutate(Method = str_to_title(Method)))  |>
+  fontsize(size = 8, part = "all") |>
+  fit_to_width(max_width = 8) |>
+  add_footer_lines(sources_note) |>
+  fontsize(size = 7, part = "footer")
+```
+
+# Socio-economic factors
+
+Whale watching is on the rise, with locals increasingly taking tourists out on charters during the June–
+September whale migration season.
+Disposal of catch
+Sharks that are caught in Niue’s waters must be discarded as per Niue’s legislation and the National
+Pelagic Management plan.
+
+# Onshore developments
+
+The processing plant remains inactive, with no immediate plans for reactivation. Most current onshore
+development relates to access infrastructure, in particular the wharf upgrade. The upgrade aims to
+provide easier and safer offloading for fishing vessels, given the exposed nature of Niue’s only port, an
+issue identified during the last operational review as a key area for improvement. A boat and canoe
+launching site on the southern side of the island has also been used to offload catch when the main port
+was too rough for normal operations.
+
+# Future prospects of the fishery
+
+The Pelagic Development and Management Plan provides the framework for guiding current and future
+prospects in the fishery, supported by long- and short-term partnerships. One key long-term partnership
+is with the Niue Ocean Wide (NOW) project, which is establishing management arrangements for Niue’s
+newest and largest marine protected area. The MPA will cover significant inshore and offshore habitats
+and species, along with both fishing and non-fishing activities. Work with NOW is already underway
+to develop surveillance tools for monitoring parts of the MPA. Negotiations regarding Niue’s High Seas
+allocation are also ongoing.
+Status of tuna fishery data collection systems
+The process of data collection is enshrined in the Licensing terms and conditions of foreign vessels fishing
+in Niue waters. Reporting and data collection is mandatory with authorised Offcers rights to set the
+terms, though these are based on data requirements of SPC and WCPFC. Penalties are imposed on
+denying or refusal of access to data. For Artisanal data, a data offcer has been identified and appointed
+to recommence collecting of data 4 days per week. In some cases including Saturday to cover Fishing
+competitions held by various Communities. In previous years fishermen were relied upon to record their
+own data. Along with the offshore data, this data is entered and stored in the TUFMAN database
+developed by SPC.
+
+# Research activities covering target and non-target species
+
+Research on pelagic species is subject to funding availability and the priorities set out in the National
+Pelagic Management and Development Plan. In 2010, a wahoo tagging programme was conducted using
+satellite tags and the ARGOS tracking system to study wahoo movements. In 2019, tuna and shark
+tagging was carried out in collaboration with the NOW project. In 2016, Niue hosted Pristine Seas
+(National Geographic) to research pelagic fish assemblages using mid-water baited remote underwater
+video stations (BRUVS); at the same time, the Pacific Community conducted finfish and invertebrate
+surveys with Niue Fisheries staff. Further research is expected subject to funding availability.
+
+

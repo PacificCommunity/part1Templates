@@ -1,0 +1,706 @@
+---
+editor:
+  markdown:
+    wrap: 72
+---
+
+# Addendum {#sec-addendum}
+
+### Section A
+
+#### CMM 2009-03 [Swordfish], Para 8
+
+CCMs shall report to the Commission the total number of vessels that
+fished for swordfish and the total catch of swordfish for the
+following:
+
+a. vessels flying their flag anywhere in the Convention Area south of
+   20$^\circ$S other than vessels operating under charter, lease or
+   other similar mechanism as part of the domestic fishery of another
+   CCM;
+
+```{r}
+#| echo: false
+#| results: asis
+cmm_subitem_note(
+  "2009-03",
+  glue::glue("{country_name} flagged vessels do not target SWORDFISH nor fish south of 20°S.")
+)
+```
+
+b. vessels operating under charter, lease or other similar mechanism
+   as part of their domestic fishery south of 20$^\circ$S; and
+
+```{r}
+#| echo: false
+#| results: asis
+cmm_subitem_note(
+  "2009-03",
+  glue::glue("{country_name} did not charter nor lease any vessels that fish south of 20°S.")
+)
+```
+
+c. any other vessels fishing within their waters south of 20$^\circ$S.
+
+```{r}
+#| echo: false
+#| results: asis
+cmm_subitem_note(
+  "2009-03",
+  glue::glue("{country_name} did not have any other vessels fishing within its waters south of 20°S.")
+)
+```
+
+```{r}
+#| echo: false
+#| label: tbl-2009-03
+#| tbl-cap: "Total number of vessels fishing for swordfish and the catch (mt) of swordfish south of 20°S. Source - Tufman 2, report 2918."
+#| eval: !expr cmm_status("2009-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2009_03.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2009_03.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr (!(cmm_status("2009-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2009_03.rds"))))
+
+cmm_table_note("2009-03", file.path(tbl_dir, "tbl_2009_03.rds"))
+```
+
+This information shall be provided in Part 1 of each CCM's annual
+report. Initially, this information will be provided in the template
+provided at Annex 2 for the period 2000-2009 and then updated
+annually.
+
+  \* *Note: WCPFC11 confirmed a common understanding that "total
+  catch" in this reporting requirement refers to both targeted and
+  bycatch catches of swordfish*
+
+**AUDIT POINT [RP] The Secretariat confirms that the CCM submitted the
+required information contained in the template in Annex 2 of CMM in
+its AR Pt 1.**
+
+\newpage
+
+#### Observer coverage (WCPFC11 decision - para 484(b))
+
+CCMs are to compile and include in Annual Report Part 1 to be
+submitted from 2015 onwards, observer coverage for their longline
+fleet activity in the previous calendar year, noting that revisions
+can be provided at the annual TCC meeting.
+
+A sample report format is provided as guidance to assist CCMs with
+reporting (WCPFC11 Summary Report Attachment L Table 4).
+
+```{r}
+#| echo: false
+#| label: tbl-observer
+#| tbl-cap: "Observer coverage of longline fleet activity where hooks are in hundred hooks from logbook data and fishing days, sea days, and trips are all calculated from VMS data. Coverage percentages are rounded to the nearest whole number. Source - Tufman 2, report 2986."
+#| eval: !expr cmm_status("observer")$applicable && file.exists(file.path(tbl_dir, "tbl_observer.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_observer.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr (!(cmm_status("observer")$applicable && file.exists(file.path(tbl_dir, "tbl_observer.rds"))))
+
+cmm_table_note("observer", file.path(tbl_dir, "tbl_observer.rds"))
+```
+
+\newpage
+
+#### CMM 2009-06 [Transshipment], Para 11 (Annex II)
+
+CCMs shall report on all transhipment activities covered by this
+Measure (including transhipment activities that occur in ports or
+EEZs) as part of their Annual Report in accordance with the guidelines
+at Annex II. In doing so, CCMs shall take all reasonable steps to
+validate and where possible, correct information received from
+vessels undertaking transhipment using all available information such
+as catch and effort data, position data, observer reports and port
+monitoring data.
+
+WCPFC15 Outcome document para 48: The Commission agreed to the TCC14
+recommendation that the template provided in TCC14-2018-RP03 Annex 3
+be used by all applicable CCMs for their future reporting in Annual
+Report Part 1, as per CMM 2009-06 paragraph 11 (Attachment O of
+WCPFC15). **Annex 3 of RP03: Transhipment information to be provided
+annually by CCMs as required by CMM 2009-06 paragraph 11 in accordance
+with the guidelines in Annex II of the measure.**
+
+Each CCM shall include in Part 1 of its Annual Report to the
+Commission:
+
+(1) the **total quantities, by weight**, of highly migratory fish
+stocks covered by this measure that were transhipped by fishing
+vessels the CCM is responsible for reporting against, with those
+quantities broken down by:
+
+a. offloaded and received;
+b. transhipped in port, transhipped at sea in areas of national
+   jurisdiction, and transhipped beyond areas of national
+   jurisdiction;
+c. transhipped inside the Convention Area and transshipped outside
+   the Convention Area;
+d. caught inside the Convention Area and caught outside the
+   Convention Area;
+e. species;
+f. product form; and
+g. fishing gear used
+
+```{r}
+#| echo: false
+#| results: asis
+
+cmm_render_figure(
+  cmm_code = "trans-01",
+  img_path = file.path(tbl_dir, "tbl_trans_01.png"),
+  caption  = " Transhipment quantities (CMM 2009-06, Para 11, Part 1).",
+  ref_id   = "tbl-trans-01"
+)
+```
+
+(2) the **number of transhipments** involving highly migratory fish
+stocks covered by this measure by fishing vessels that is responsible
+for reporting against, broken down by:
+
+a. offloaded and received;
+b. transhipped in port, transhipped at sea in areas of national
+   jurisdiction, and transhipped beyond areas of national
+   jurisdiction;
+c. transhipped inside the Convention Area and transhipped outside the
+   Convention Area;
+d. caught inside the Convention Area and caught outside the Convention
+   Area; and
+e. fishing gear
+
+```{r}
+#| echo: false
+#| results: asis
+
+cmm_render_figure(
+  cmm_code = "trans-02",
+  img_path = file.path(tbl_dir, "tbl_trans_02.png"),
+  caption  = "Transhipment quantities (CMM 2009-06, Para 11, Part 2).",
+  ref_id   = "tbl-trans-02"
+)
+```
+
+**AUDIT POINT [RP] The Secretariat confirms receipt by the CCM in AR
+Pt 1 of the required information in the prescribed format contained
+at Annex II of CMM 2009-06, and confirms that the report includes the
+required information for all CCM transshipment events in the
+Convention Area of all HMFS covered by the Convention, as well as
+HMFS taken in the Convention Area and transshipped outside the
+Convention Area, in accordance with paras 10, 11, and 12 of CMM
+2009-06.**
+
+#### CMM 2011-03 [Impact of PS fishing on cetaceans], Para 5
+
+CCMs shall include in their Part 1 Annual Report any instances in
+which cetaceans have been encircled by the purse seine nets of their
+flagged vessels, reported under paragraph 2(b).
+
+**AUDIT POINT [RP] Secretariat confirms that CCM submitted a report on
+instances in which cetaceans have been encircled by the purse seine
+nets of flagged vessels and as reported in ARPt1 under para 2(b) of
+CMM.**
+
+```{r}
+#| echo: false
+#| label: tbl-2011-03
+#| tbl-cap: "Summary of the number of cetacean encirclements by purse seine nets in reporting year. Source - Tufman 2, report 3222."
+#| eval: !expr cmm_status("2011-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2011_03.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2011_03.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr (!(cmm_status("2011-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2011_03.rds"))))
+
+cmm_table_note("2011-03", file.path(tbl_dir, "tbl_2011_03.rds"))
+```
+
+\newpage
+
+#### CMM 2018-3 [Seabirds], Para 13
+
+CCMs shall annually provide to the Commission, in Part 1 of their
+annual reports, all available information on interactions with
+seabirds reported or collected by observers to enable the estimation
+of seabird mortality in all fisheries to which the Convention applies
+(see below for Part 1 reporting template guideline). These reports
+shall include information on:
+
+1. the proportion of observed effort with specific mitigation
+   measures used; and
+2. observed and reported species specific seabird bycatch rates and
+   numbers or statistically rigorous estimates of species-specific
+   seabird interaction rates (for longline, interactions per 1,000
+   hooks) and total numbers
+
+**Table(s) x (by area)**
+
+```{r}
+#| echo: false
+#| label: tbl-2018-03-x-south
+#| tbl-cap: "Reported longline activity (hundred hooks and number of vessels), observed (hundred) hooks, number of seabird captures, and the capture rate (# seabirds/1000 hooks), by year in the area south of 30S. Source - Tufman 2, reports: 3612,3317 and 3605."
+#| eval: !expr cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03_x_south.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2018_03_x_south.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr (!(cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03_x_south.rds"))))
+
+cmm_table_note("2018-03", file.path(tbl_dir, "tbl_2018_03_x_south.rds"))
+```
+
+```{r}
+#| echo: false
+#| label: tbl-2018-03-x-mids
+#| tbl-cap: "Reported longline activity (hundred hooks and number of vessels), observed (hundred) hooks, number of seabird captures, and the capture rate (# seabirds/1000 hooks), by year in the area between 30S and 25S. Source - Tufman 2, reports: 3612, 3317 and 3605."
+#| eval: !expr cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03_x_mids.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2018_03_x_mids.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr (!(cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03_x_mids.rds"))))
+
+cmm_table_note("2018-03", file.path(tbl_dir, "tbl_2018_03_x_mids.rds"))
+```
+
+```{r}
+#| echo: false
+#| label: tbl-2018-03-x-midn
+#| tbl-cap: "Reported longline activity (hundred hooks and number of vessels), observed (hundred) hooks, number of seabird captures, and the capture rate (# seabirds/1000 hooks), by year in the area between 25S and 23N. Source - Tufman 2, reports: 3612, 3317 and 3605."
+#| eval: !expr cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03_x_midn.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2018_03_x_midn.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr (!(cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03_x_midn.rds"))))
+
+cmm_table_note("2018-03", file.path(tbl_dir, "tbl_2018_03_x_midn.rds"))
+```
+
+
+```{r}
+#| echo: false
+#| label: tbl-2018-03-x-north
+#| tbl-cap: "Reported longline activity (hundred hooks and number of vessels), observed (hundred) hooks, number of seabird captures, and the capture rate (# seabirds/1000 hooks), by year in the area north of 23N. Source - Tufman 2, reports: 3612, 3317 and 3605."
+#| eval: !expr cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03_x_north.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2018_03_x_north.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr (!(cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03_x_north.rds"))))
+
+cmm_table_note("2018-03", file.path(tbl_dir, "tbl_2018_03_x_north.rds"))
+```
+
+\clearpage
+
+**Table(s) y (by area)**
+
+```{r}
+#| echo: false
+#| label: tbl-2018-03-y-south
+#| tbl-cap: "Proportion of mitigation types used by the fleet in reporting year, in the area south of 30S. Source - Tufman 2, report: 3315."
+#| eval: !expr cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03_y_south.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2018_03_y_south.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr (!(cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03_y_south.rds"))))
+
+cmm_table_note("2018-03", file.path(tbl_dir, "tbl_2018_03_y_south.rds"))
+```
+
+```{r}
+#| echo: false
+#| label: tbl-2018-03-y-mids
+#| tbl-cap: "Proportion of mitigation types used by the fleet in reporting year, in the area between 30S and 25S. Source - Tufman 2, report: 3315."
+#| eval: !expr cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03_y_mids.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2018_03_y_mids.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr (!(cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03_y_mids.rds"))))
+
+cmm_table_note("2018-03", file.path(tbl_dir, "tbl_2018_03_y_mids.rds"))
+```
+
+```{r}
+#| echo: false
+#| label: tbl-2018-03-y-midn
+#| tbl-cap: "Proportion of mitigation types used by the fleet in the reporting year, in the area between 25S and south of 23N. Source - Tufman 2, report: 3315."
+#| eval: !expr cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03_y_midn.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2018_03_y_midn.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr (!(cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03_y_midn.rds"))))
+
+cmm_table_note("2018-03", file.path(tbl_dir, "tbl_2018_03_y_midn.rds"))
+```
+
+
+```{r}
+#| echo: false
+#| label: tbl-2018-03-y-north
+#| tbl-cap: "Proportion of mitigation types used by the fleet in the reporting year, in the area north of 23N. Source - Tufman 2, report: 3315."
+#| eval: !expr cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03_y_north.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2018_03_y_north.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr (!(cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03_y_north.rds"))))
+
+cmm_table_note("2018-03", file.path(tbl_dir, "tbl_2018_03_y_north.rds"))
+```
+
+**Table z**
+
+```{r}
+#| echo: false
+#| label: tbl-2018-03-z
+#| tbl-cap: "Number of observed seabird captures in longline fisheries in the reporting year, by species and area. Source - Tufman 2, report: 3314."
+#| eval: !expr cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03z.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2018_03z.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr (!(cmm_status("2018-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2018_03z.rds"))))
+
+cmm_table_note("2018-03", file.path(tbl_dir, "tbl_2018_03z.rds"))
+```
+
+**AUDIT POINT [RP] The Secretariat confirms that CCM submitted a
+report using the reporting template in Annex 2 of CMM 2018-03 on
+seabird interactions reported or collected by observers.**
+
+\newpage
+
+### Section B
+
+#### CMM 2006-04 [Southwest Pacific striped marlin], Para 4
+
+In accordance with paragraph 1, CCMs shall provide information to the
+Commission, by 1 July 2007, on the number of their vessels that have
+fished for striped marlin in the Convention area south of
+15$^\circ$S, during the period 2000–2004, and in doing so, nominate
+the maximum number of vessels that shall continue to be permitted to
+fish for striped marlin in the area south of 15$^\circ$S. CCMs shall
+report annually to the Commission the catch levels of their fishing
+vessels that have taken striped marlin as a bycatch as well as the
+number and catch levels of vessels fishing for striped marlin in the
+Convention Area south of 15$^\circ$S.
+
+```{r}
+#| echo: false
+#| results: asis
+cmm_subitem_note(
+  "2006-04",
+  glue::glue("{country_name} did not flag nor charter any long-line vessels in {report_year}, therefore
+the CMM 2006-04 [South West Striped Marlin], Para 4 is not applicable to {country_name}.")
+)
+```
+
+```{r}
+#| echo: false
+#| label: tbl-2006-04
+#| tbl-cap: "Number of vessels and catch levels of striped marlin south of 15°S. Source - Tufman 2, report 2917."
+#| eval: !expr cmm_status("2006-04")$applicable && file.exists(file.path(tbl_dir, "tbl_2006_04.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2006_04.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr (!(cmm_status("2006-04")$applicable && file.exists(file.path(tbl_dir, "tbl_2006_04.rds"))))
+
+cmm_table_note("2006-04", file.path(tbl_dir, "tbl_2006_04.rds"))
+```
+
+\newpage
+
+#### CMM 2015-02 [South Pacific Albacore] Para 4
+
+CCMs shall report annually to the Commission the annual catch levels
+taken by each of their fishing vessels that has taken South Pacific
+albacore, as well as the number of vessels actively fishing for South
+Pacific albacore, in the Convention area south of 20°S. Catch by
+vessel shall be reported according to the following species groups:
+albacore tuna, bigeye tuna, yellowfin tuna, swordfish, other billfish,
+and sharks. Initially this information will be provided for the
+period 2006-2014 and then updated annually. CCMs are encouraged to
+provide data from periods prior to these dates.
+
+WCPFC20 Outcome: The Commission agreed that the term "actively fishing
+for" used in CMM 2015-02 is applied to: 'Vessels fishing south of 20
+degrees South with an annual catch of albacore in that area with
+South Pacific albacore greater than 50% of the catch of potential
+target tuna (albacore, yellowfin and bigeye, southern bluefin,
+skipjack) and swordfish.'
+
+```{r}
+#| echo: false
+#| results: asis
+
+glue::glue("No report available – {country_name} did not charter nor flag any long line vessels in  as.character({report_year}, and have no vessels fishing south of 20S, hence the CMM 2015-02 [South Pacific Albacore] Para 4 is not applicable to country_name}.")  
+```
+
+**AUDIT POINT [RP] The Secretariat confirms that the CCM submitted
+information on annual catch levels by its flagged vessels taking SP
+Albacore, as well as the number of CCM flagged vessels actively
+fishing for SP Albacore south of 20S, with catch levels reported by
+species groups.**
+
+\newpage
+
+#### CMM 2019-03 [North Pacific Albacore], Para 3
+
+All CCMs shall report annually to the WCPFC Commission all catches of
+albacore north of the equator and all fishing effort north of the
+equator in fisheries directed at albacore. The reports for both catch
+and fishing effort shall be made by gear type. Catches shall be
+reported in terms of weight. Fishing effort shall be reported in
+terms of the most relevant measures for a given gear type, including
+at a minimum for all gear types, the number of vessel-days fished
+using the template provided in Annex 1.
+
+*Note:  WCPFC10 clarified that this reporting responsibility lies
+with the flag State*
+
+```{r}
+#| echo: false
+#| label: tbl-2019-03
+#| tbl-cap: "Summary of vessels fishing in the North Pacific and the number and metric tonnes of North Pacific albacore catches reported in the past 5 years. The number of vessels reported in this table represents all longline vessels fishing in the North Pacific. Source - Tufman 2, report: 3602."
+#| eval: !expr cmm_status("2019-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2019_03.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2019_03.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr (!(cmm_status("2019-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2019_03.rds"))))
+
+cmm_table_note("2019-03", file.path(tbl_dir, "tbl_2019_03.rds"))
+```
+
+**AUDIT POINT [RP] The Secretariat confirms that CCM submitted a
+report of information on catch and effort by CCM flagged vessels
+engaged in directed fishing for NP albacore north of the equator, by
+gear type and days fished (effort) and by weight (catch), using the
+template at Annex 1 of CMM 2019-03.**
+
+\newpage
+
+#### CMM 2023-03 [North Pacific Swordfish], Para 4
+
+All CCMs shall report annually to the WCPFC Commission all catches of
+North Pacific swordfish in the Area and all fishing effort in those
+fisheries as well as catch and effort across the North Pacific
+subject to the measures in paragraph 2, by gear type using the
+template provided in Annex 1.
+
+\**Note: CMM 2023-03:*
+
+*Paragraph 2: The Members, Cooperating Non-Members and participating
+territories (hereinafter referred to as CCMs) shall take necessary
+measures to ensure that the level of fishing effort of their
+fisheries taking more than 200 metric tons per year of North Pacific
+swordfish in the Area is not increased beyond 2008-2010 average
+annual levels.*
+
+*Paragraph 3 clarifies that paragraphs 2 and 4 shall not be applied to
+those fisheries taking less than 200 metric tons of North Pacific
+swordfish in the Area per year. However, if the catches of such
+fisheries exceed 200 metric tons in any given year, the Commission
+shall adopt appropriate management measure for such fisheries.*
+
+```{r}
+#| echo: false
+#| label: tbl-2023-03
+#| tbl-cap: "Catch and fishing effort for North Pacific swordfish, by gear type. Source - Tufman 2, report 3513."
+#| eval: !expr cmm_status("2023-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2023_03.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2023_03.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr (!(cmm_status("2023-03")$applicable && file.exists(file.path(tbl_dir, "tbl_2023_03.rds"))))
+
+cmm_table_note("2023-03", file.path(tbl_dir, "tbl_2023_03.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr tolower(country_code) == "vu"
+
+if (tolower(country_code) == "vu") {
+  cat("#### CCMM 2013-08 - Conservation and Management Measure for Silky Sharks\n\n")
+
+  cat("1. Commission Members, Cooperating Non-Members and Participating Territories (CCMs) shall prohibit vessels flying their flag and vessels under charter arrangements to the CCM from retaining on board, transshipping, storing on a fishing vessel, or landing any silky shark caught in the Convention Area, in whole or in part, in the fisheries covered by the Convention.\n\n")
+
+  cat("2. CCMs shall require all vessels flying their flag and vessels under charter arrangements to the CCM to release any silky shark that is caught in the Convention Area as soon as possible after the shark is brought alongside the vessel, and to do so in a manner that results in as little harm to the shark as possible.")
+
+}
+```
+
+```{r}
+#| echo: false
+#| label: tbl-2013-08
+#| tbl-cap: "Source - Tufman 2, report: 2955."
+#| eval: !expr tolower(country_code) == "vu" && cmm_status("2013-08")$applicable && file.exists(file.path(tbl_dir, "tbl_2013_08.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2013_08.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr tolower(country_code) == "vu" && !(cmm_status("2013-08")$applicable && file.exists(file.path(tbl_dir, "tbl_2013_08.rds")))
+
+cmm_table_note("2013-08", file.path(tbl_dir, "tbl_2013_08.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr tolower(country_code) == "vu"
+
+if (tolower(country_code) == "vu") {
+  cat("#### CMM 2012-04 - Conservation and Management Measure for protection of whale sharks from purse seine fishing operations\n\n")
+
+  cat("1. This measure shall apply to the high seas and exclusive economic zones of the Convention Area. CCMs shall prohibit their flagged vessels from setting a purse seine on a school of tuna associated with a whale shark if the animal is sighted prior to the commencement of the set.\n\n")
+
+  cat("2. CCMs shall require that, in the event that a whale shark is not deliberately encircled in the purse seine net, the master of the vessel shall:
+
+(a) ensure that all reasonable steps are taken to ensure its safe release.; and
+
+(b) report the incident to the relevant authority of the flag State, including the number of individuals, details of how and why the encirclement happened, where it occurred, steps taken to ensure safe release, and an assessment of the life status of the whale shark on release (including whether the animal was released alive but subsequently died)"
+)
+
+}
+```
+
+```{r}
+#| echo: false
+#| label: tbl-2012-04
+#| tbl-cap: "Source - Tufman 2, report: 2942."
+#| eval: !expr tolower(country_code) == "vu" && cmm_status("2012-04")$applicable && file.exists(file.path(tbl_dir, "tbl_2012_04.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2012_04.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr tolower(country_code) == "vu" && !(cmm_status("2012-04")$applicable && file.exists(file.path(tbl_dir, "tbl_2012_04.rds")))
+
+cmm_table_note("2012-04", file.path(tbl_dir, "tbl_2012_04.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr tolower(country_code) == "vu"
+
+if (tolower(country_code) == "vu") {
+  cat("#### CMM 2011-04 - Conservation and Management Measure for Oceanic Whitetip Sharks\n\n")
+
+  cat("1. Members, Cooperating Non-Members and Participating Territories (CCMs) shall prohibit vessels flying their flag and vessels under charter arrangements to the CCM from retaining on board, transshipping, storing on a fishing vessel, or landing any oceanic whitetip shark, in whole or in part, in the fisheries covered by the Convention.\n\n")
+
+  cat("2. CCMs shall require all vessels flying their flag and vessels under charter arrangements to the CCM to release any oceanic whitetip shark that is caught as soon as possible after the shark is brought alongside the vessel, and to do so in a manner that results in as little harm to the shark as possible."
+)
+
+}
+```
+
+```{r}
+#| echo: false
+#| label: tbl-2011-04
+#| tbl-cap: "Source - Tufman 2, report: 2956."
+#| eval: !expr tolower(country_code) == "vu" && cmm_status("2011-04")$applicable && file.exists(file.path(tbl_dir, "tbl_2011_04.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2011_04.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr tolower(country_code) == "vu" && !(cmm_status("2011-04")$applicable && file.exists(file.path(tbl_dir, "tbl_2011_04.rds")))
+
+cmm_table_note("2011-04", file.path(tbl_dir, "tbl_2011_04.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr tolower(country_code) == "vu"
+
+if (tolower(country_code) == "vu") {
+  cat("#### CMM 2010-07 - Conservation Management Measure for Sharks\n\n")
+
+  cat("Each CCM shall include key shark species, as identified by the Scientific Committee, in
+their annual reporting to the Commission of annual catch and fishing effort statistics by gear type, including available historical data, in accordance with the WCPF Convention and agreed
+reporting procedures. CCMs shall also report annual retained and discarded catches in Part 2 of their annual report. CCMs shall as appropriate, support research and development of strategies for the avoidance of unwanted shark captures (e.g. chemical, magnetic and rare earth metal shark deterrents).."
+)
+
+}
+```
+
+```{r}
+#| echo: false
+#| label: tbl-2010-07
+#| tbl-cap: "Source - Tufman 2, report: 2939."
+#| eval: !expr tolower(country_code) == "vu" && cmm_status("2010-07")$applicable && file.exists(file.path(tbl_dir, "tbl_2010_07.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_2010_07.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: asis
+#| eval: !expr tolower(country_code) == "vu" && !(cmm_status("2010-07")$applicable && file.exists(file.path(tbl_dir, "tbl_2010_07.rds")))
+
+cmm_table_note("2010-07", file.path(tbl_dir, "tbl_2010_07.rds"))
+```

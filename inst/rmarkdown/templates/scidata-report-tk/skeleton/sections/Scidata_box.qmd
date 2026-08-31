@@ -1,0 +1,30 @@
+---
+editor:
+  markdown:
+    wrap: 72
+---
+
+```{r header, echo = FALSE}
+
+row1 <- glue::glue("Scientific data was provided to the Commission in accordance with the decision relating to the provision of scientific data to the Commission by 30 April {report_year+1}: [Yes/No]")
+row2 <- "If no, please indicate the reason(s) and intended actions:"
+row3 = row4 = row5 = ''
+
+tab <- data.frame(lcol = c(row1, row2, row3, row4, row5), 
+                  rcol = c("Yes", rep("", 4)) )
+
+ft <- flextable(tab)
+# No header row
+ft <- delete_rows(ft, i = 1, part = "header")
+# Merge cells - there are a ton of merge_* functions - using this one for simplicity
+ft <- merge_at(ft, i = 2:5, j = 1:2)
+ft <- valign(ft, i = 2:5, valign = 'top') 
+# Relative column width
+ft <- width(ft, width = c(1, 0.1)) # Set relative width of columns
+ft <- width(ft, width = dim(ft)$widths * 6.6 / (flextable_dim(ft)$widths)) 
+ft <- border_outer(ft)
+ft <- border_inner(ft)
+
+ft
+
+```

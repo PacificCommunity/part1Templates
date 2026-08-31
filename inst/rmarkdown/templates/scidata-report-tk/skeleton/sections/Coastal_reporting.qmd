@@ -1,0 +1,114 @@
+---
+---
+
+# Coastal Reporting {#sec-coastal}
+
+Since 2012, `r country_name` has participated in the PNA purse seine vessel day scheme (PS VDS) established under the Parties to the Palau Arrangement, with an EEZ limit of 1,000 fishing days for the purse seine fishery. In 2016, `r country_name` also joined the PNA longline VDS and was allocated 5,000 fishing days, commencing the sale of these days the following year.
+
+Offshore commercial fishing is undertaken by foreign vessels from distant water fishing nations and neighbouring Pacific Island States. In `r country_name` no new vessel was licensed to fish `r country_name` waters.
+
+@tbl-data-eez-all-flags presents a catch summary by fishing gear over the last five years. Albacore is the most important species in the longline catch, with moderate catches of yellowfin and bigeye also taken. Longline activity in the `r country_name` EEZ has varied considerably over recent years: catches in some years were almost negligible. Longline activity was not recorded in the `r country_name` EEZ in `r report_year`. The share of catch by flag state for all previous 5 years is shown in @fig-data-eez-all-flags-perc.
+
+Purse seine fishing has likewise been variable (@tbl-data-eez-all-flags), although effort in `r report_year` was substantially lower (16 fishing days) than the previous five-year average of around 150 fishing days. The fleet composition over this period is shown in @fig-data-eez-all-flags-perc, with vessels flagged to the United States and Tuvalu accounting for the vast majority of effort in `r report_year`. Annual catches for `r report_year` (@fig-data-eez-all-flags-hist) indicate that skipjack was the most commonly caught species across all flags.
+
+```{r}
+#| echo: false
+#| label: tbl-data-eez-all-flags
+#| tbl-cap: !expr glue::glue("Annual catches in {country_name} EEZ per gear for the last 5 years. Source - Tufman 2, reports 2900 and 2894.")
+#| eval: !expr file.exists(file.path(tbl_dir, "tbl_coastal_eez_all_flags.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_coastal_eez_all_flags.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| eval: !expr file.exists(file.path(fig_dir, paste0("/tbl_coastal_eez_perc_catch.png")))
+
+ref = "fig-data-eez-all-flags-perc"
+
+img_path <- file.path(fig_dir, paste0("tbl_coastal_eez_perc_catch.png"))
+
+cat(glue::glue(
+  "![Percentage of total catch (all species) in the {country_name} EEZ, by flag during the last 5 years. Source - Tufman 2, reports 2900 and 2894.]",
+  "({img_path}){{#{ref} fig-align='center' width=90%}}"
+))
+```
+
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| eval: !expr file.exists(file.path(fig_dir, paste0("/tbl_coastal_eez_mt_catch.png")))
+
+ref = "fig-data-eez-all-flags-hist"
+
+img_path <- file.path(fig_dir, paste0("tbl_coastal_eez_mt_catch.png"))
+
+cat(glue::glue(
+  "![Annual catch of tuna in the {country_name} EEZ by flag during {report_year}. Source - Tufman 2, reports 2900 and 2894.]",
+  "({img_path}){{#{ref} fig-align='center' width=90%}}"
+))
+```
+
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| eval: !expr file.exists(file.path(fig_dir, paste0("/tbl_coastal_map_l.png")))
+
+ref = "fig-data-eez-l-spatial"
+
+img_path <- file.path(fig_dir, paste0("tbl_coastal_map_l.png"))
+
+cat(glue::glue(
+  "![Catch of the three main tuna species by longline  vessels  fishing  in  the  {country_name}  EEZ,  in  each  1x1  degree  cell  in  the EEZ and  the immediate surrounding area during {report_year}. Source - Tufman 2, report 3375.]",
+  "({img_path}){{#{ref} fig-align='center' width=100%}}"
+))
+```
+
+@fig-data-eez-s-spatial shows the distribution of purse seine catch, and its species composition within the EEZ and the adjacent area in `r report_year`. This shows that catch is highest in the northern parts of the EEZ, and this pattern is consistent with the results presented in previous Part reports. Skipjack was the species most commonly caught in all spatial cells followed by Yellowfin tuna which also corroborates with the overall `r report_year` catch composition (@fig-data-eez-all-flags-perc) and results from previous years.
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| eval: !expr file.exists(file.path(fig_dir, paste0("/tbl_coastal_map_s.png")))
+
+ref = "fig-data-eez-s-spatial"
+
+img_path <- file.path(fig_dir, paste0("tbl_coastal_map_s.png"))
+
+cat(glue::glue(
+  "![Catch of the three main tuna species by purse  seine  vessels  fishing  in  the  {country_name}  EEZ,  in  each  1x1  degree  cell  in  the EEZ and  the immediate surrounding area during {report_year}. Source - Tufman 2, report 2904.]",
+  "({img_path}){{#{ref} fig-align='center' width=100%}}"
+))
+```
+
+## Artisanal ACE
+
+Although `r country_name` is not a flag state, this section presents annual catch estimates derived from artisanal fishery data. To improve the estimate of annual production, catch landings recorded in *TAILS* are raised using estimated fishing activity --- the number of boats and canoes estimated to fish daily at each landing site. @tbl-raised-ace presents the raised and unraised estimates per species for 2025.
+
+```{r}
+#| echo: false
+#| label: tbl-raised-ace
+#| results: 'asis'
+#| tbl-cap: Raised and unraised annual artisanal catch estimates in mt
+
+source_labels <- c(tufman2 = "Tufman2 (Tails)", ikasavea = "Ikasavea")
+
+sources_note <- glue::glue(
+  "Data sources: {paste(source_labels[artisanal_data_sources], collapse = ' + ')}.",
+  if (!is.null(local_knowl_trips_file))
+    " Member-estimated (local knowledge) trip counts were incorporated where higher than reported trips."
+  else "No estimated trips are available per landing sites, therefore, catch values could not be raised. "
+)
+
+flextable(artisanal_ace$ace_summary|>
+  mutate(Method = str_to_title(Method)))  |>
+  fontsize(size = 8, part = "all") |>
+  fit_to_width(max_width = 8) |>
+  add_footer_lines(sources_note) |>
+  fontsize(size = 7, part = "footer")
+```
+
+

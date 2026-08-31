@@ -1,0 +1,25 @@
+---
+bibliography: ../references.bib
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Background {#sec-background}
+
+Niue has not licensed any foreign fishing vessels for the past six years, resulting in no offshore catch to
+report for 2025. Domestic artisanal fishers continue to supply restaurants, families, and local markets,
+though at an inconsistent rate. Reduced annual catches have at times made it diffcult to maintain reliable
+supply for food security. Shark depredation has also contributed to the decline, significantly impacting
+fishers’ gear and morale.
+
+As tourism grows, marine activities have diversified accordingly. Niue Fisheries is working with the Niue
+Ocean Wide (NOW) project to establish management arrangements for Niue’s newest and largest marine
+protected area. The MPA will cover significant inshore and offshore habitats and species, as well as
+fishing and non-fishing activities. Catch-and-release sport fisheries may be permitted within the area
+under licence.
+
+
+
+
+

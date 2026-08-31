@@ -1,0 +1,15 @@
+---
+bibliography: ../references.bib
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Background {#sec-background}
+
+Tokelau does not have a commercial fishing fleet however, it has a large artisanal fleet of about 200 small 10’ to 16’ motorised aluminium boats powered by 15-40HP outboard motors. These artisanal fishing boats operate within the 12nm Territorial Sea (TS), but generally do not venture out further than 5nm from shore. For food security purposes, Tokelau has also established a buffer zone (closed area) of 13nm extending from the 12nm TS closed to any foreign fishing.
+
+Transhipment is permitted to occur in the Tokelau Exclusive Zone (EEZ), TS and Internal Waters where there are exceptional circumstances and prior approval provided. Tokelau did not approve any tranship-ment activity in her waters in 2025.
+
+
+

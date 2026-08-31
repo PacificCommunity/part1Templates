@@ -1,0 +1,50 @@
+```{r draft-watermark, echo=FALSE, results='asis'}
+if (isTRUE(knitr::is_html_output())) {
+  cat("```{=html}\n")
+  cat("<script>\n")
+  cat("document.addEventListener(\"DOMContentLoaded\", function () {\n")
+  cat("  document.body.classList.add(\"draft-watermark\");\n")
+  cat("  document.body.setAttribute(\"data-watermark\", \"DRAFT - DO NOT CITE OR REDISTRIBUTE\");\n")
+  cat("});\n")
+  cat("</script>\n")
+  cat("```\n")
+}
+```
+
+\newpage
+
+<!-- Scidata box -->
+
+```{r Scidata_box, child='sections/Scidata_box.qmd'}
+```
+
+\newpage
+
+<!-- Abstract -->
+
+```{r Abstract, child='sections/Abstract.qmd'}
+```
+
+\newpage
+
+<!-- Background -->
+
+```{r Background, child='sections/Background.qmd'}
+```
+
+\newpage
+
+<!-- Coastal Reporting -->
+
+```{r Coastal, child='sections/Coastal_reporting.qmd'}
+```
+
+\newpage
+
+<!-- Addendum -->
+
+```{r Addendum, child='sections/Addendum.qmd'}
+```
+
+\newpage
+

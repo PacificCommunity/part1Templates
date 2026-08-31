@@ -1,0 +1,6 @@
+name: SciData Part 1 Report
+description: >
+  Starting point for a member country's Part 1 report: report structure,
+  section files, Tufman2 data prep script, and configs. Uses your own
+  TUF_COUNTRY by default; the report_year is set when you create it.
+create_dir: true

@@ -1,0 +1,9 @@
+---
+bibliography: ../references.bib
+---
+
+# Abstract
+
+Niue is not a flag state and does not host transshipments in its ports or EEZ, and is therefore exempt
+from compiling the information required in Annual Report Part 1 under WCPFC Conservation and Management Measures (CMMs). Yet, this report compiles relevant information on Niue’s domestic artisanal
+fishery, including raised and unraised tuna catch estimates.

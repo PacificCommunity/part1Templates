@@ -1,0 +1,111 @@
+---
+---
+
+# Coastal Reporting {#sec-coastal}
+
+In this section we reports on fishing activity by foreign and domestic fleets in the 
+waters of national jurisdiction (EEZ).
+
+## Fishing Licenses
+
+TODO: check if IFMS table exists
+
+## Catch and Effort Trends
+
+```{r}
+#| echo: false
+#| label: tbl-data-eez-all-flags
+#| tbl-cap: !expr glue::glue("Annual catches in {country_name} EEZ per gear for the last 5 years. Source - Tufman 2, reports 2900 and 2894.")
+#| eval: !expr file.exists(file.path(tbl_dir, "tbl_coastal_eez_all_flags.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_coastal_eez_all_flags.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| eval: !expr file.exists(file.path(fig_dir, paste0("/tbl_coastal_eez_perc_catch.png")))
+
+ref = "fig-data-eez-all-flags-perc"
+
+img_path <- file.path(fig_dir, paste0("tbl_coastal_eez_perc_catch.png"))
+
+cat(glue::glue(
+  "![Percentage of total catch (all species) in the {country_name} EEZ, by flag during the last 5 years. Source - Tufman 2, reports 2900 and 2894.]",
+  "({img_path}){{#{ref} fig-align='center' width=90%}}"
+))
+```
+
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| eval: !expr file.exists(file.path(fig_dir, paste0("/tbl_coastal_eez_mt_catch.png")))
+
+ref = "fig-data-eez-all-flags-hist"
+
+img_path <- file.path(fig_dir, paste0("tbl_coastal_eez_mt_catch.png"))
+
+cat(glue::glue(
+  "![Annual catch of tuna in the {country_name} EEZ by flag during {report_year}. Source - Tufman 2, reports 2900 and 2894.]",
+  "({img_path}){{#{ref} fig-align='center' width=90%}}"
+))
+```
+
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| eval: !expr file.exists(file.path(fig_dir, paste0("/tbl_coastal_map_l.png")))
+
+ref = "fig-data-eez-l-spatial"
+
+img_path <- file.path(fig_dir, paste0("tbl_coastal_map_l.png"))
+
+cat(glue::glue(
+  "![Catch of the three main tuna species by longline  vessels  fishing  in  the  {country_name}  EEZ,  in  each  1x1  degree  cell  in  the EEZ and  the immediate surrounding area during {report_year}. Source - Tufman 2, report 3375.]",
+  "({img_path}){{#{ref} fig-align='center' width=100%}}"
+))
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| eval: !expr file.exists(file.path(fig_dir, paste0("/tbl_coastal_map_s.png")))
+
+ref = "fig-data-eez-s-spatial"
+
+img_path <- file.path(fig_dir, paste0("tbl_coastal_map_s.png"))
+
+cat(glue::glue(
+  "![Catch of the three main tuna species by purse  seine  vessels  fishing  in  the  {country_name}  EEZ,  in  each  1x1  degree  cell  in  the EEZ and  the immediate surrounding area during {report_year}. Source - Tufman 2, report 2904.]",
+  "({img_path}){{#{ref} fig-align='center' width=100%}}"
+))
+```
+
+## Artisanal ACE
+
+```{r}
+#| echo: false
+#| label: tbl-raised-ace
+#| results: 'asis'
+#| tbl-cap: Raised and unraised annual artisanal catch estimates in mt
+
+source_labels <- c(tufman2 = "Tufman2 (Tails)", ikasavea = "Ikasavea")
+
+sources_note <- glue::glue(
+  "Data sources: {paste(source_labels[artisanal_data_sources], collapse = ' + ')}.",
+  if (!is.null(local_knowl_trips_file))
+    " Member-estimated (local knowledge) trip counts were incorporated where higher than reported trips."
+  else "No estimated trips are available per landing sites, therefore, catch values could not be raised. "
+)
+
+flextable(artisanal_ace$ace_summary|>
+  mutate(Method = str_to_title(Method)))  |>
+  fontsize(size = 8, part = "all") |>
+  fit_to_width(max_width = 8) |>
+  add_footer_lines(sources_note) |>
+  fontsize(size = 7, part = "footer")
+```
+
+

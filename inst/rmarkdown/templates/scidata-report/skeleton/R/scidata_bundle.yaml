@@ -1,0 +1,113 @@
+# Report bundle definition for this Part 1 report.
+#
+# Update the `reports:` list below when the set of Tufman2 reports
+# needed for this report changes year to year.
+#
+# {{report_year}} below is a placeholder — it gets filled in at read
+# time via tuf_read_bundle(path, report_year = 2024), rather than
+# being hardcoded here.
+#
+# Each report gets its own explicit `attrs`. This is what replaces the
+# old guid-based exceptions: instead of code saying "remove flag_code
+# for this specific guid," you just don't list flag_code for that
+# report's entry below.
+
+country_code: {{country_code}}
+save_folder: data/scidata_{{report_year}}_{{country_code}}
+
+reports:
+  - user_report_id: 3605
+  - user_report_id: 3608
+  - user_report_id: 3619
+  - user_report_id: 2953
+    attrs:
+      flag_code: {{country_code}}
+  - user_report_id: 2918
+    attrs:
+      flag_code: {{country_code}}
+      year: {{report_year}}
+  - user_report_id: 2986
+    attrs:
+      flag_code: {{country_code}}
+      year: {{report_year}}
+  - user_report_id: 3222
+    attrs:
+      flag_code: {{country_code}}
+      year: {{report_year}}
+  - user_report_id: 2917
+    attrs:
+      flag_code: {{country_code}}
+      year: {{report_year}}
+  - user_report_id: 3602
+    attrs:
+      year: {{report_year}}
+  - user_report_id: 3317
+    attrs:
+      flag_code: {{country_code}}
+  - user_report_id: 3315
+    attrs:
+      flag_code: {{country_code}}
+      year: {{report_year}}
+  - user_report_id: 3314
+    attrs:
+      flag_code: {{country_code}}
+      year: {{report_year}}
+  - user_report_id: 3612
+    attrs:
+      flag_code: {{country_code}}
+  - user_report_id: 3513
+    attrs:
+      flag_code: {{country_code}}
+      year: {{report_year}}
+  - user_report_id: 2955
+    attrs:
+      flag_code: {{country_code}}
+      year: {{report_year}}
+  - user_report_id: 2942
+    attrs:
+      flag_code: {{country_code}}
+      year: {{report_year}} 
+  - user_report_id: 2956
+    attrs:
+      flag_code: {{country_code}}
+      year: {{report_year}}
+  - user_report_id: 2939
+    attrs:
+      flag_code: {{country_code}}
+      year: {{report_year}}
+  - user_report_id: 3615
+    attrs:
+      year: {{report_year}}
+  - user_report_id: 3527
+    attrs:
+      year: {{report_year}} 
+  - user_report_id: 3614
+    attrs:
+      year: {{report_year}}
+  - user_report_id: 3613
+    attrs:
+      flag_code: {{country_code}}
+      year: {{report_year}}
+  - user_report_id: 3609
+    attrs:
+      flag_code: {{country_code}}
+      year: {{report_year}}
+  - user_report_id: 3083
+    attrs:
+      flag_code: {{country_code}}
+      year: {{report_year}} 
+  - user_report_id: 3616
+    attrs:
+      flag_code: {{country_code}}
+      year: {{report_year}}
+  - user_report_id: 3590
+    attrs:
+      min_year: 2000
+  - user_report_id: 3597
+  - user_report_id: 2900
+  - user_report_id: 2894
+    attrs:
+      year: {{report_year}}
+  - user_report_id: 3375
+  - user_report_id: 2904
+  - user_report_id: 3634

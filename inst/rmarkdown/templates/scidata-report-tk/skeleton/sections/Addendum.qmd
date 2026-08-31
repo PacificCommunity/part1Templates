@@ -1,0 +1,279 @@
+---
+editor:
+  markdown:
+    wrap: 72
+---
+
+# Addendum {#sec-addendum}
+
+### Section A
+
+#### CMM 2009-03 [Swordfish], Para 8
+
+CCMs shall report to the Commission the total number of vessels that
+fished for swordfish and the total catch of swordfish for the
+following:
+
+a. vessels flying their flag anywhere in the Convention Area south of
+   20$^\circ$S other than vessels operating under charter, lease or
+   other similar mechanism as part of the domestic fishery of another
+   CCM;
+
+b. vessels operating under charter, lease or other similar mechanism
+   as part of their domestic fishery south of 20$^\circ$S; and
+
+c. any other vessels fishing within their waters south of 20$^\circ$S.
+
+**Not applicable, Tokelau does not have a domestic commercial fishing industry.**
+
+- Tokelau is not a flagged state.
+- Tokelau does not authorize vessels to fish on the High Seas.
+- Tokelau does not charter Foreign Fishing Vessels.
+
+This information shall be provided in Part 1 of each CCM's annual
+report. Initially, this information will be provided in the template
+provided at Annex 2 for the period 2000-2009 and then updated
+annually.
+
+  \* *Note: WCPFC11 confirmed a common understanding that "total
+  catch" in this reporting requirement refers to both targeted and
+  bycatch catches of swordfish*
+
+**AUDIT POINT [RP] The Secretariat confirms that the CCM submitted the
+required information contained in the template in Annex 2 of CMM in
+its AR Pt 1.**
+
+#### Observer coverage (WCPFC11 decision - para 484(b))
+
+CCMs are to compile and include in Annual Report Part 1 to be
+submitted from 2015 onwards, observer coverage for their longline
+fleet activity in the previous calendar year, noting that revisions
+can be provided at the annual TCC meeting.
+
+A sample report format is provided as guidance to assist CCMs with
+reporting (WCPFC11 Summary Report Attachment L Table 4).
+
+**Not applicable, Tokelau does not have a domestic commercial fishing industry.**
+
+- Tokelau is not a flagged state.
+- Tokelau does not authorize vessels to fish on the High Seas.
+- Tokelau does not charter Foreign Fishing Vessels.
+
+#### CMM 2009-06 [Transshipment], Para 11 (Annex II)
+
+CCMs shall report on all transhipment activities covered by this
+Measure (including transhipment activities that occur in ports or
+EEZs) as part of their Annual Report in accordance with the guidelines
+at Annex II. In doing so, CCMs shall take all reasonable steps to
+validate and where possible, correct information received from
+vessels undertaking transhipment using all available information such
+as catch and effort data, position data, observer reports and port
+monitoring data.
+
+WCPFC15 Outcome document para 48: The Commission agreed to the TCC14
+recommendation that the template provided in TCC14-2018-RP03 Annex 3
+be used by all applicable CCMs for their future reporting in Annual
+Report Part 1, as per CMM 2009-06 paragraph 11 (Attachment O of
+WCPFC15). **Annex 3 of RP03: Transhipment information to be provided
+annually by CCMs as required by CMM 2009-06 paragraph 11 in accordance
+with the guidelines in Annex II of the measure.**
+
+Each CCM shall include in Part 1 of its Annual Report to the
+Commission:
+
+(1) the **total quantities, by weight**, of highly migratory fish
+stocks covered by this measure that were transhipped by fishing
+vessels the CCM is responsible for reporting against, with those
+quantities broken down by:
+
+a. offloaded and received;
+b. transhipped in port, transhipped at sea in areas of national
+   jurisdiction, and transhipped beyond areas of national
+   jurisdiction;
+c. transhipped inside the Convention Area and transshipped outside
+   the Convention Area;
+d. caught inside the Convention Area and caught outside the
+   Convention Area;
+e. species;
+f. product form; and
+g. fishing gear used
+
+
+**Not applicable, Tokelau does not have a domestic commercial fishing industry.**
+
+- Tokelau is not a flagged state.
+- Tokelau does not authorize vessels to fish on the High Seas.
+- Tokelau does not charter Foreign Fishing Vessels.
+
+(2) the **number of transhipments** involving highly migratory fish
+stocks covered by this measure by fishing vessels that is responsible
+for reporting against, broken down by:
+
+a. offloaded and received;
+b. transhipped in port, transhipped at sea in areas of national
+   jurisdiction, and transhipped beyond areas of national
+   jurisdiction;
+c. transhipped inside the Convention Area and transhipped outside the
+   Convention Area;
+d. caught inside the Convention Area and caught outside the Convention
+   Area; and
+e. fishing gear
+
+
+**Not applicable, Tokelau does not have a domestic commercial fishing industry.**
+
+- Tokelau is not a flagged state.
+- Tokelau does not authorize vessels to fish on the High Seas.
+- Tokelau does not charter Foreign Fishing Vessels.
+
+**AUDIT POINT [RP] The Secretariat confirms receipt by the CCM in AR
+Pt 1 of the required information in the prescribed format contained
+at Annex II of CMM 2009-06, and confirms that the report includes the
+required information for all CCM transshipment events in the
+Convention Area of all HMFS covered by the Convention, as well as
+HMFS taken in the Convention Area and transshipped outside the
+Convention Area, in accordance with paras 10, 11, and 12 of CMM
+2009-06.**
+
+#### CMM 2011-03 [Impact of PS fishing on cetaceans], Para 5
+
+CCMs shall include in their Part 1 Annual Report any instances in
+which cetaceans have been encircled by the purse seine nets of their
+flagged vessels, reported under paragraph 2(b).
+
+**AUDIT POINT [RP] Secretariat confirms that CCM submitted a report on
+instances in which cetaceans have been encircled by the purse seine
+nets of flagged vessels and as reported in ARPt1 under para 2(b) of
+CMM.**
+
+
+**Not applicable, Tokelau does not have a domestic commercial fishing industry.**
+
+- Tokelau is not a flagged state.
+- Tokelau does not authorize vessels to fish on the High Seas.
+- Tokelau does not charter Foreign Fishing Vessels.
+
+#### CMM 2018-3 [Seabirds], Para 13
+
+CCMs shall annually provide to the Commission, in Part 1 of their
+annual reports, all available information on interactions with
+seabirds reported or collected by observers to enable the estimation
+of seabird mortality in all fisheries to which the Convention applies
+(see below for Part 1 reporting template guideline). These reports
+shall include information on:
+
+1. the proportion of observed effort with specific mitigation
+   measures used; and
+2. observed and reported species specific seabird bycatch rates and
+   numbers or statistically rigorous estimates of species-specific
+   seabird interaction rates (for longline, interactions per 1,000
+   hooks) and total numbers
+
+**Table(s) x (by area)**
+
+**Not applicable, Tokelau does not have a domestic commercial fishing industry.**
+
+**Table(s) y (by area)**
+
+**Not applicable, Tokelau does not have a domestic commercial fishing industry.**
+
+**Table z**
+
+**Not applicable, Tokelau does not have a domestic commercial fishing industry.**
+
+**AUDIT POINT [RP] The Secretariat confirms that CCM submitted a
+report using the reporting template in Annex 2 of CMM 2018-03 on
+seabird interactions reported or collected by observers.**
+
+\newpage
+
+### Section B
+
+#### CMM 2006-04 [Southwest Pacific striped marlin], Para 4
+
+In accordance with paragraph 1, CCMs shall provide information to the
+Commission, by 1 July 2007, on the number of their vessels that have
+fished for striped marlin in the Convention area south of
+15$^\circ$S, during the period 2000–2004, and in doing so, nominate
+the maximum number of vessels that shall continue to be permitted to
+fish for striped marlin in the area south of 15$^\circ$S. CCMs shall
+report annually to the Commission the catch levels of their fishing
+vessels that have taken striped marlin as a bycatch as well as the
+number and catch levels of vessels fishing for striped marlin in the
+Convention Area south of 15$^\circ$S.
+
+**Not applicable, Tokelau does not have a domestic commercial fishing industry.**
+
+#### CMM 2015-02 [South Pacific Albacore] Para 4
+
+CCMs shall report annually to the Commission the annual catch levels
+taken by each of their fishing vessels that has taken South Pacific
+albacore, as well as the number of vessels actively fishing for South
+Pacific albacore, in the Convention area south of 20°S. Catch by
+vessel shall be reported according to the following species groups:
+albacore tuna, bigeye tuna, yellowfin tuna, swordfish, other billfish,
+and sharks. Initially this information will be provided for the
+period 2006-2014 and then updated annually. CCMs are encouraged to
+provide data from periods prior to these dates.
+
+WCPFC20 Outcome: The Commission agreed that the term "actively fishing
+for" used in CMM 2015-02 is applied to: 'Vessels fishing south of 20
+degrees South with an annual catch of albacore in that area with
+South Pacific albacore greater than 50% of the catch of potential
+target tuna (albacore, yellowfin and bigeye, southern bluefin,
+skipjack) and swordfish.'
+
+**Not applicable, Tokelau does not have a domestic commercial fishing industry.**
+
+**AUDIT POINT [RP] The Secretariat confirms that the CCM submitted
+information on annual catch levels by its flagged vessels taking SP
+Albacore, as well as the number of CCM flagged vessels actively
+fishing for SP Albacore south of 20S, with catch levels reported by
+species groups.**
+
+#### CMM 2019-03 [North Pacific Albacore], Para 3
+
+All CCMs shall report annually to the WCPFC Commission all catches of
+albacore north of the equator and all fishing effort north of the
+equator in fisheries directed at albacore. The reports for both catch
+and fishing effort shall be made by gear type. Catches shall be
+reported in terms of weight. Fishing effort shall be reported in
+terms of the most relevant measures for a given gear type, including
+at a minimum for all gear types, the number of vessel-days fished
+using the template provided in Annex 1.
+
+*Note:  WCPFC10 clarified that this reporting responsibility lies
+with the flag State*
+
+**Not applicable, Tokelau does not have a domestic commercial fishing industry.**
+
+**AUDIT POINT [RP] The Secretariat confirms that CCM submitted a
+report of information on catch and effort by CCM flagged vessels
+engaged in directed fishing for NP albacore north of the equator, by
+gear type and days fished (effort) and by weight (catch), using the
+template at Annex 1 of CMM 2019-03.**
+
+#### CMM 2023-03 [North Pacific Swordfish], Para 4
+
+All CCMs shall report annually to the WCPFC Commission all catches of
+North Pacific swordfish in the Area and all fishing effort in those
+fisheries as well as catch and effort across the North Pacific
+subject to the measures in paragraph 2, by gear type using the
+template provided in Annex 1.
+
+\**Note: CMM 2023-03:*
+
+*Paragraph 2: The Members, Cooperating Non-Members and participating
+territories (hereinafter referred to as CCMs) shall take necessary
+measures to ensure that the level of fishing effort of their
+fisheries taking more than 200 metric tons per year of North Pacific
+swordfish in the Area is not increased beyond 2008-2010 average
+annual levels.*
+
+*Paragraph 3 clarifies that paragraphs 2 and 4 shall not be applied to
+those fisheries taking less than 200 metric tons of North Pacific
+swordfish in the Area per year. However, if the catches of such
+fisheries exceed 200 metric tons in any given year, the Commission
+shall adopt appropriate management measure for such fisheries.*
+
+**Not applicable, Tokelau does not have a domestic commercial fishing industry.**

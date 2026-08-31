@@ -1,0 +1,210 @@
+---
+editor:
+  markdown:
+    wrap: 72
+---
+
+# Flag State Reporting {#sec-flag}
+
+## Annual catch estimates for the national fleet 
+
+```{r}
+#| echo: false
+#| label: tbl-tbl1l
+#| tbl-cap: !expr glue::glue("Annual catch estimates for the {country_name} longline fleet, by primary species and year, in the WCPFC Convention Area, for years {yr_range}. Source - Tufman 2, report 3605")
+#| eval: !expr file.exists(file.path(tbl_dir, "tbl_ace_l.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_ace_l.rds"))
+```
+
+```{r}
+#| echo: false
+#| label: tbl-tbl1s
+#| tbl-cap: !expr glue::glue("Annual catch estimates for the {country_name} purse seine fleet, by primary species and year, in the WCPFC Convention Area, for years {yr_range}. Source - Tufman 2, report 3605")
+#| eval: !expr file.exists(file.path(tbl_dir, "tbl_ace_s.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_ace_s.rds"))
+```
+
+```{r}
+#| echo: false
+#| label: tbl-tblotareas
+#| tbl-cap: !expr glue::glue("Annual raised catch estimates for the {country_name}  longline vessels, for tuna and billfish by Broad Ocean areas over {report_year}. Source - Tufman 2, report 3609, 3083 and 3616.")
+#| eval: !expr file.exists(file.path(tbl_dir, "tbl_other_areas.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_other_areas.rds"))
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| eval: !expr file.exists(file.path(fig_dir, paste0("/fig_ace_l.png")))
+
+ref = "fig-fig1l"
+gear_code = "l"
+gear_name = "longline"
+effort = "no. of hooks"
+
+img_path <- file.path(fig_dir, paste0("fig_ace_", gear_code, ".png"))
+
+cat(glue::glue(
+  "![Historical annual catch estimates (mt) and effort ({effort}) for the {country_name} {gear_name} fleet, by
+primary species and year, in the WCPFC Convention Area, for years {yr_range}. Source - Tufman 2,
+report 3605 and 3597 (effort)]",
+  "({img_path}){{#{ref} fig-align='center' width=100%}}"
+))
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| eval: !expr file.exists(file.path(fig_dir, paste0("/fig_ace_s.png")))
+
+ref = "fig-fig1s"
+gear_code = "s"
+gear_name = "purse seine"
+effort = "no. of trips"
+img_path <- file.path(fig_dir, paste0("fig_ace_", gear_code, ".png"))
+
+
+cat(glue::glue(
+  "![Historical annual catch estimates (mt) and effort ({effort}) for the {country_name} {gear_name} fleet, by
+primary species and year, in the WCPFC Convention Area, for years {yr_range}. Source - Tufman 2,
+report 3605 and 3597 (effort)]",
+  "({img_path}){{#{ref} fig-align='center' width=100%}}"
+))
+```
+
+## Historical annual vessel numbers for the national fleet
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| eval: !expr file.exists(file.path(fig_dir, paste0("/fig_ace_vessels.png")))
+
+ref = "fig-fig_ves"
+img_path <- file.path(fig_dir, paste0("fig_ace_vessels.png"))
+
+cat(glue::glue(
+  "![Historical annual vessel numbers for the {country_name} fleet, by gear, for the WCPFC Convention Area, for years {yr_range}. Source - Tufman 2, report 3605]",
+  "({img_path}){{#{ref} fig-align='center' width=100%}}"
+))
+```
+
+```{r}
+#| echo: false
+#| label: tbl-tbl_ves_l
+#| tbl-cap: !expr glue::glue("Number of {country_name} vessels, by size category, for the WCPFC Convention Area, for years {yr_range}. Source - Tufman 2, report 3605")
+#| eval: !expr file.exists(file.path(tbl_dir, "tbl_vess_categ_l.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_vess_categ_l.rds"))
+```
+
+```{r}
+#| echo: false
+#| label: tbl-tbl_ves_s
+#| tbl-cap: !expr glue::glue("Number of {country_name} vessels, by size category, for the WCPFC Convention Area, for years {yr_range}. Source - Tufman 2, report 3605")
+#| eval: !expr file.exists(file.path(tbl_dir, "tbl_vess_categ_s.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_vess_categ_s.rds"))
+```
+
+## Distribution of catches of target species for different national fisheries
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| eval: !expr file.exists(file.path(fig_dir, paste0("/fig_map_l.png")))
+
+gear_code = "l"
+gear_name = "longline"
+ref = paste0("fig-fig_map_", gear_code)
+img_path <- file.path(fig_dir, paste0("fig_map_", gear_code, ".png"))
+
+cat(glue::glue(
+  "![Map showing the distribution of target species catch (mt) for the {country_name} {gear_name} fishery, for years {yr_range}. Source
+- Tufman 2, report 3608.]",
+  "({img_path}){{#{ref} fig-align='center' width=70%}}"
+))
+```
+
+```{r}
+#| echo: false
+#| results: 'asis'
+#| eval: !expr file.exists(file.path(fig_dir, paste0("/fig_map_s.png")))
+
+gear_code = "s"
+gear_name = "purse seine"
+ref = paste0("fig-fig_map_", gear_code)
+img_path <- file.path(fig_dir, paste0("fig_map_", gear_code, ".png"))
+
+cat(glue::glue(
+  "![Map showing the distribution of target species catch (mt) for the {country_name} {gear_name} fishery, for years {yr_range}. Source
+- Tufman 2, report 3608.]",
+  "({img_path}){{#{ref} fig-align='center' width=70%}}"
+))
+```
+
+## Captures of species of special interest (SSIs)
+
+```{r}
+#| echo: false
+#| label: tbl-tbl_ssi_s
+#| tbl-cap: !expr glue::glue("Observed annual estimated catches of species of special interest (seabird, turtle and marine mammals) by the {country_name} purse seine fleet, in the WCPFC Convention Area, for years {yr_range}. Note that the Total may not reflect the sum of Alive and Dead as some animals are reported with an Unknown status. Source - Tufman 2, report 2953.")
+#| eval: !expr file.exists(file.path(tbl_dir, paste0("data_tbl_ssi_", "s", ".rds")))
+
+gear_code = "s"
+gear_name = "purse seine"
+data_clean <- read_rds(file.path(tbl_dir, paste0("data_tbl_ssi_", gear_code, ".rds")))
+
+flextable(data_clean) |>
+  set_table_properties(layout = "autofit", width = 0.95, align = "center") |>
+  fontsize(size = 9, part = "all") |>
+  colformat_num(j = "year", big.mark = "") |>
+  width(j = c("category", "species"), width = 1.5) |>
+  align(align = "center", part = "all") |>
+  labelizor(labels = c(year="Year", species="Species", category="Category",
+                       number="Total", alive="Alive", dead="Dead"), part = "all") |>
+  padding(padding.left = 5, padding.right = 5, part = "all")
+```
+
+```{r}
+#| echo: false
+#| label: tbl-tbl_ssi_l
+#| tbl-cap: !expr glue::glue("Observed annual estimated catches of species of special interest (seabird, turtle and marine mammals) by the {country_name} longline fleet, in the WCPFC Convention Area, for years {yr_range}. Note that the Total may not reflect the sum of Alive and Dead as some animals are reported with an Unknown status. Source - Tufman 2, report 2953.")
+#| eval: !expr file.exists(file.path(tbl_dir, paste0("data_tbl_ssi_", "l", ".rds")))
+
+gear_code = "l"
+gear_name = "longline"
+data_clean <- read_rds(file.path(tbl_dir, paste0("data_tbl_ssi_", gear_code, ".rds")))
+
+flextable(data_clean) |>
+  set_table_properties(layout = "autofit", width = 0.95, align = "center") |>
+  fontsize(size = 9, part = "all") |>
+  colformat_num(j = "year", big.mark = "") |>
+  width(j = c("category", "species"), width = 1.5) |>
+  align(align = "center", part = "all") |>
+  labelizor(labels = c(year="Year", species="Species", category="Category",
+                       number="Total", alive="Alive", dead="Dead"), part = "all") |>
+  padding(padding.left = 5, padding.right = 5, part = "all")
+```
+
+## Annual catch estimates for non-target, associated and dependent species for the national fleet
+
+```{r}
+#| echo: false
+#| label: tbl-tbl_non_target_s
+#| tbl-cap: !expr glue::glue("Annual estimated catches of non-target, associated and dependent species, including sharks, by the {country_name} purse seine fleet, in the WCPFC Convention Area, for years 2021-2025. Source - Tufman 2, report 3605.")
+#| eval: !expr file.exists(file.path(tbl_dir, "tbl_non_target_s.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_non_target_s.rds"))
+```
+
+```{r}
+#| echo: false
+#| label: tbl-tbl_non_target_l
+#| tbl-cap: !expr glue::glue("Annual estimated catches of non-target, associated and dependent species, including sharks, by the {country_name} longline fleet, in the WCPFC Convention Area, for years 2021-2025. Source - Tufman 2, report 3605.")
+#| eval: !expr file.exists(file.path(tbl_dir, "tbl_non_target_l.rds"))
+
+read_rds(file.path(tbl_dir, "tbl_non_target_l.rds"))
+```
