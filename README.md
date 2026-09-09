@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # part1Templates
 
 Report templates for the WCPFC SciData Part 1 report, built on
