@@ -44,7 +44,7 @@ if (length(report_ids_ikasavea) > 0 &&
 }
 
 # prepare ikasavea data if it exists
-if (nrow(all_data$data_3615) == 0){
+if (is.null(all_data$data_3615) || nrow(all_data$data_3615) == 0) {
   data_source_lst = c()
 }else{
   data_source_lst = c("tufman2")
