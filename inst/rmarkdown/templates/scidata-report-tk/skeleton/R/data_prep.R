@@ -60,32 +60,34 @@ if (length(report_ids_ikasavea) > 0 &&
 }
 
 # prepare ikasavea data if it exists
-if (is.null(ika_data) && nrow(all_data$data_3615) == 0) {
-  data_source_lst = c()
-}else{
-  data_source_lst = c("tufman2")
+# prepare ikasavea data if it exists
+has_tufman_data <- !is.null(all_data$data_3615) && nrow(all_data$data_3615) > 0
+
+if (!has_tufman_data) {
+  data_source_lst <- c()
+} else {
+  data_source_lst <- c("tufman2")
 }
 
 ika_data <- prep_ikasavea_artisanal_inputs(ikasavea_folder, report_year, data_source_lst)
 
-if (is.null(ika_data) && nrow(all_data$data_3615) == 0) {
+if (is.null(ika_data) && !has_tufman_data) {
   cat("No Ikasavea or Tails trip data found for this country/year. Document generation stopped.\n")
   knitr::knit_exit()
-}else{
+} else {
   # try to extract the local knowledge table
-  if (length(list.files(art_est_trips_folder)) == 1){
-    local_knowl_trips_file = paste0(art_est_trips_folder, "/", list.files(art_est_trips_folder)[1])
-  }else{
-    local_knowl_trips_file = NULL
+  if (length(list.files(art_est_trips_folder)) == 1) {
+    local_knowl_trips_file <- paste0(art_est_trips_folder, "/", list.files(art_est_trips_folder)[1])
+  } else {
+    local_knowl_trips_file <- NULL
   }
   
   if (is.null(ika_data)) {
-    artisanal_data_sources <- data_source_lst        # ikasavea failed/absent - just tufman2 (or empty)
+    artisanal_data_sources <- data_source_lst
   } else {
-    artisanal_data_sources <- ika_data$data_source_lst # ikasavea succeeded - has both, if applicable
+    artisanal_data_sources <- ika_data$data_source_lst
   }
   
-  # Calculate ACE
   artisanal_ace <- prep_artisanal_ace(
     data_3615 = all_data$data_3615,
     data_3614 = all_data$data_3614,
@@ -93,5 +95,4 @@ if (is.null(ika_data) && nrow(all_data$data_3615) == 0) {
     data_ika_catch_kg = ika_data$data_ika_catch_kg,
     local_knowl_trips_file = local_knowl_trips_file
   )
-  
 }
