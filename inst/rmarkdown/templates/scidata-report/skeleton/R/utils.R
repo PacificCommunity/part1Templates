@@ -2036,8 +2036,8 @@ render_coastal_map <- function(data,
     
     data <- data |>
       mutate(
-        latd = parse_coord(latitude,  "lat"),
-        lond = parse_coord(longitude, "lon")
+        latd = parse_coord(lat,  "lat"),
+        lond = parse_coord(lon, "lon")
       ) |>
       select(flag, vessel_name, log_date, latd, lond, species, mt) |>
       distinct() |>

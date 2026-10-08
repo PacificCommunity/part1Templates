@@ -25,32 +25,32 @@ You can update your environment variables at any time using `usethis::edit_r_env
 
 Open your project and run all the next steps inside it.
 
-2.  Load the library and create a project folder for a given report year.
+2.  Load the library, specify report year (in this example `2025`) and your country code (in this example the `TUF_COUNTRY` specified in the `.Renv` ).
 
 ``` r
 library(part1Templates)
-new_scidata_report(report_year = 2025)
+
+report_yr = 2025
+country_cd = Sys.getenv("TUF_COUNTRY")
 ```
 
-This creates a project folder (e.g. `vu_2025_scidata`, using your own `TUF_COUNTRY`) and downloads all the data from required from Tufman 2 reports to your computer. You can check `R/scidata_bundle.yaml` if you want to know the list of Tufman 2 reports used for Part1.
+3.  Create a project folder for the report year and country specified in the step above.
 
-3.  Set your working environment
+```         
+new_scidata_report(report_year = report_yr, country_code = country_cd)
+```
+
+This creates a project folder (e.g. `[country_cd]_[report_yr]_scidata`) and downloads all the data from required from Tufman 2 reports to your computer. You can check `R/scidata_bundle.yaml` if you want to know the list of Tufman 2 reports used for Part1.
+
+4.  Set your working environment
 
 Set the working environment to the folder you just created.
 
 ``` r
-setwd("vu_2025_scidata")
-quarto::quarto_render("part1-report.qmd")
+setwd(paste0(country_cd, "_", report_yr, "_scidata"))
 ```
 
-4.  Generate your Part1 report
-
-``` r
-quarto::quarto_render("part1-report.qmd")
-```
-
-The line above will reuses cached Tufman 2 reports downloaded to your computer as CSVs under data/scidata\_<year>\_<country>/ if present. Use the code below if you want to\
-re-download everything fresh before running your report.
+5.  Generate your Part1 report
 
 ``` r
 quarto::quarto_render(
@@ -59,6 +59,10 @@ quarto::quarto_render(
 )
 ```
 
+The line above will re-download all Tufman 2 reports fresh to your computer as CSVs under data/scidata\_<year>\_<country>/ 
+before running your report. If after running the first time you want to reuse the CSVs downloaded in previous run, just set
+refresh_data to `FALSE`.
+
 ## Special cases: Niue, Tokelau (and soon Wallis & Futuna)
 
 Niue and Tokelau don't have a licensed foreign-flagged fleet, so their Part 1 report skips the flag-state reporting section entirely, it's a different report structure, not just different data (see `R/special_cases.R`). `new_scidata_report()` picks the right skeleton automatically based on country code, so you don't need a separate function:
@@ -66,7 +70,7 @@ Niue and Tokelau don't have a licensed foreign-flagged fleet, so their Part 1 re
 ``` r
 new_scidata_report(report_year = 2025, country_code = "nu")
 new_scidata_report(report_year = 2025, country_code = "tk")
-```
+````
 
 ## Files to update every report cycle
 
